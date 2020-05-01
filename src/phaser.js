@@ -15,15 +15,12 @@ var Extend = require('./utils/object/Extend');
 
 var Phaser = {
 
-    Actions: require('./actions'),
     Animations: require('./animations'),
-    BlendModes: require('./renderer/BlendModes'),
     Cache: require('./cache'),
     Cameras: require('./cameras'),
     Core: require('./core'),
     Class: require('./utils/Class'),
     Create: require('./create'),
-    Curves: require('./curves'),
     Data: require('./data'),
     Display: require('./display'),
     DOM: require('./dom'),
@@ -34,7 +31,6 @@ var Phaser = {
     Input: require('./input'),
     Loader: require('./loader'),
     Math: require('./math'),
-    Physics: require('./physics'),
     Plugins: require('./plugins'),
     Renderer: require('./renderer'),
     Scale: require('./scale'),
@@ -55,14 +51,6 @@ var Phaser = {
 if (typeof FEATURE_SOUND)
 {
     Phaser.Sound = require('./sound');
-}
-
-if (typeof PLUGIN_CAMERA3D)
-{
-    Phaser.Cameras.Sprite3D = require('../plugins/camera3d/src');
-    Phaser.GameObjects.Sprite3D = require('../plugins/camera3d/src/sprite3d/Sprite3D');
-    Phaser.GameObjects.Factories.Sprite3D = require('../plugins/camera3d/src/sprite3d/Sprite3DFactory');
-    Phaser.GameObjects.Creators.Sprite3D = require('../plugins/camera3d/src/sprite3d/Sprite3DCreator');
 }
 
 if (typeof PLUGIN_FBINSTANT)
